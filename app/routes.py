@@ -33,3 +33,8 @@ def login():
         flash('Login requested for user {}, remember_me={}'.format(form.username.data, form.remember_me.data))  # Вывод сообщения пользователю
         return redirect(url_for('login'))  # Перенаправление на страницу '/index'
     return render_template('login.html', title='Sign in', form=form)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
